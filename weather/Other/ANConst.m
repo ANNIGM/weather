@@ -12,9 +12,10 @@ NSString * const ANRequestURLCityinfo = @"http://apis.baidu.com/apistore/weather
 NSString * const ANRequestURLCitylist = @"http://apis.baidu.com/apistore/weatherservice/citylist";
 
 /** 提示信息 */
+
 NSString * const ANRequestError = @"再来一次,皮卡丘..";
 NSString * const ANRequestSuccess = @"成功,皮卡丘...";
-//NSString * const ANRequestStatus = @"成功,皮卡丘...";
+NSString * const ANRequestServiesError = @"对不起\n服务器繁忙...";
 
 
 

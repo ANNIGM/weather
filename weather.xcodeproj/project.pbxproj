@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AC0EF7887F5AD8E7182DE9DA /* libPods-weather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6699094E3F402E65F0A30E0A /* libPods-weather.a */; };
-		D11BE3441DEA186B0043D960 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D17AA66E1DE7ED9100E5D746 /* ViewController.m */; };
 		D11BE3451DEA18700043D960 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D17AA66B1DE7ED9100E5D746 /* AppDelegate.m */; };
 		D11BE3461DEA18A00043D960 /* TodayMode.m in Sources */ = {isa = PBXBuildFile; fileRef = D17AA6B81DE858DE00E5D746 /* TodayMode.m */; };
 		D11BE3471DEA18A70043D960 /* HistoryDayMode.m in Sources */ = {isa = PBXBuildFile; fileRef = D17AA6C61DEA122C00E5D746 /* HistoryDayMode.m */; };
@@ -30,6 +29,19 @@
 		D17AA68D1DE7ED9100E5D746 /* weatherUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D17AA68C1DE7ED9100E5D746 /* weatherUITests.m */; };
 		D17AA6AC1DE80A6C00E5D746 /* WeatherController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17AA6A81DE80A6C00E5D746 /* WeatherController.xib */; };
 		D17AA6C41DEA0B8200E5D746 /* WeatherViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17AA6C21DEA0B8200E5D746 /* WeatherViewCell.xib */; };
+		D1BA65961DED917800DFCA34 /* PYSearch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1BA658A1DED917800DFCA34 /* PYSearch.bundle */; };
+		D1BA65971DED917800DFCA34 /* PYSearchConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA658D1DED917800DFCA34 /* PYSearchConst.m */; };
+		D1BA65981DED917800DFCA34 /* PYSearchSuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA658F1DED917800DFCA34 /* PYSearchSuggestionViewController.m */; };
+		D1BA65991DED917800DFCA34 /* PYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65911DED917800DFCA34 /* PYSearchViewController.m */; };
+		D1BA659A1DED917800DFCA34 /* UIColor+PYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65931DED917800DFCA34 /* UIColor+PYExtension.m */; };
+		D1BA659B1DED917800DFCA34 /* UIView+PYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65951DED917800DFCA34 /* UIView+PYExtension.m */; };
+		D1BA65A91DED91CB00DFCA34 /* FocusCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA659F1DED91CB00DFCA34 /* FocusCityViewController.m */; };
+		D1BA65AB1DED91CB00DFCA34 /* CityMode.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65A41DED91CB00DFCA34 /* CityMode.m */; };
+		D1BA65AC1DED91CB00DFCA34 /* FocusCityViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65A71DED91CB00DFCA34 /* FocusCityViewCell.m */; };
+		D1BA65AD1DED91CB00DFCA34 /* FocusCityViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1BA65A81DED91CB00DFCA34 /* FocusCityViewCell.xib */; };
+		D1BA65B61DED96C800DFCA34 /* AreaMode.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65B51DED96C800DFCA34 /* AreaMode.m */; };
+		D1BA65BC1DEDCCAC00DFCA34 /* SearchCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65BB1DEDCCAC00DFCA34 /* SearchCityViewController.m */; };
+		D1BA65BF1DEE99A500DFCA34 /* PYSearchSuggestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65BE1DEE99A500DFCA34 /* PYSearchSuggestionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +76,6 @@
 		D17AA6681DE7ED9100E5D746 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D17AA66A1DE7ED9100E5D746 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D17AA66B1DE7ED9100E5D746 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D17AA66D1DE7ED9100E5D746 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D17AA66E1DE7ED9100E5D746 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D17AA6711DE7ED9100E5D746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D17AA6731DE7ED9100E5D746 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D17AA6761DE7ED9100E5D746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,6 +106,31 @@
 		D17AA6C51DEA122C00E5D746 /* HistoryDayMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDayMode.h; sourceTree = "<group>"; };
 		D17AA6C61DEA122C00E5D746 /* HistoryDayMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDayMode.m; sourceTree = "<group>"; };
 		D17AA6C91DEA149700E5D746 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		D1BA658A1DED917800DFCA34 /* PYSearch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PYSearch.bundle; sourceTree = "<group>"; };
+		D1BA658B1DED917800DFCA34 /* PYSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearch.h; sourceTree = "<group>"; };
+		D1BA658C1DED917800DFCA34 /* PYSearchConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearchConst.h; sourceTree = "<group>"; };
+		D1BA658D1DED917800DFCA34 /* PYSearchConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSearchConst.m; sourceTree = "<group>"; };
+		D1BA658E1DED917800DFCA34 /* PYSearchSuggestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearchSuggestionViewController.h; sourceTree = "<group>"; };
+		D1BA658F1DED917800DFCA34 /* PYSearchSuggestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSearchSuggestionViewController.m; sourceTree = "<group>"; };
+		D1BA65901DED917800DFCA34 /* PYSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearchViewController.h; sourceTree = "<group>"; };
+		D1BA65911DED917800DFCA34 /* PYSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSearchViewController.m; sourceTree = "<group>"; };
+		D1BA65921DED917800DFCA34 /* UIColor+PYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PYExtension.h"; sourceTree = "<group>"; };
+		D1BA65931DED917800DFCA34 /* UIColor+PYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PYExtension.m"; sourceTree = "<group>"; };
+		D1BA65941DED917800DFCA34 /* UIView+PYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PYExtension.h"; sourceTree = "<group>"; };
+		D1BA65951DED917800DFCA34 /* UIView+PYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PYExtension.m"; sourceTree = "<group>"; };
+		D1BA659E1DED91CB00DFCA34 /* FocusCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusCityViewController.h; sourceTree = "<group>"; };
+		D1BA659F1DED91CB00DFCA34 /* FocusCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusCityViewController.m; sourceTree = "<group>"; };
+		D1BA65A31DED91CB00DFCA34 /* CityMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityMode.h; sourceTree = "<group>"; };
+		D1BA65A41DED91CB00DFCA34 /* CityMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityMode.m; sourceTree = "<group>"; };
+		D1BA65A61DED91CB00DFCA34 /* FocusCityViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusCityViewCell.h; sourceTree = "<group>"; };
+		D1BA65A71DED91CB00DFCA34 /* FocusCityViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusCityViewCell.m; sourceTree = "<group>"; };
+		D1BA65A81DED91CB00DFCA34 /* FocusCityViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FocusCityViewCell.xib; sourceTree = "<group>"; };
+		D1BA65B41DED96C800DFCA34 /* AreaMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaMode.h; sourceTree = "<group>"; };
+		D1BA65B51DED96C800DFCA34 /* AreaMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaMode.m; sourceTree = "<group>"; };
+		D1BA65BA1DEDCCAC00DFCA34 /* SearchCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCityViewController.h; sourceTree = "<group>"; };
+		D1BA65BB1DEDCCAC00DFCA34 /* SearchCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCityViewController.m; sourceTree = "<group>"; };
+		D1BA65BD1DEE99A500DFCA34 /* PYSearchSuggestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearchSuggestionCell.h; sourceTree = "<group>"; };
+		D1BA65BE1DEE99A500DFCA34 /* PYSearchSuggestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSearchSuggestionCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +204,9 @@
 			children = (
 				D17AA66A1DE7ED9100E5D746 /* AppDelegate.h */,
 				D17AA66B1DE7ED9100E5D746 /* AppDelegate.m */,
-				D17AA66D1DE7ED9100E5D746 /* ViewController.h */,
-				D17AA66E1DE7ED9100E5D746 /* ViewController.m */,
+				D1BA659C1DED91CB00DFCA34 /* FocusCity */,
 				D17AA6A41DE80A6C00E5D746 /* Index */,
+				D1BA65851DED915700DFCA34 /* Search */,
 				D17AA6701DE7ED9100E5D746 /* Main.storyboard */,
 				D17AA6731DE7ED9100E5D746 /* Assets.xcassets */,
 				D17AA6751DE7ED9100E5D746 /* LaunchScreen.storyboard */,
@@ -226,6 +261,8 @@
 				D17AA6A61DE80A6C00E5D746 /* WeatherController.h */,
 				D17AA6A71DE80A6C00E5D746 /* WeatherController.m */,
 				D17AA6A81DE80A6C00E5D746 /* WeatherController.xib */,
+				D1BA65BA1DEDCCAC00DFCA34 /* SearchCityViewController.h */,
+				D1BA65BB1DEDCCAC00DFCA34 /* SearchCityViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -278,6 +315,100 @@
 				D17AA6B51DE8532B00E5D746 /* ANConst.m */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		D1BA65851DED915700DFCA34 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D1BA65891DED917800DFCA34 /* PYSearch */,
+				D1BA65861DED915700DFCA34 /* Controller */,
+				D1BA65871DED915700DFCA34 /* Model */,
+				D1BA65881DED915700DFCA34 /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D1BA65861DED915700DFCA34 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D1BA65871DED915700DFCA34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1BA65B41DED96C800DFCA34 /* AreaMode.h */,
+				D1BA65B51DED96C800DFCA34 /* AreaMode.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1BA65881DED915700DFCA34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1BA65891DED917800DFCA34 /* PYSearch */ = {
+			isa = PBXGroup;
+			children = (
+				D1BA658A1DED917800DFCA34 /* PYSearch.bundle */,
+				D1BA658B1DED917800DFCA34 /* PYSearch.h */,
+				D1BA658C1DED917800DFCA34 /* PYSearchConst.h */,
+				D1BA658D1DED917800DFCA34 /* PYSearchConst.m */,
+				D1BA658E1DED917800DFCA34 /* PYSearchSuggestionViewController.h */,
+				D1BA658F1DED917800DFCA34 /* PYSearchSuggestionViewController.m */,
+				D1BA65BD1DEE99A500DFCA34 /* PYSearchSuggestionCell.h */,
+				D1BA65BE1DEE99A500DFCA34 /* PYSearchSuggestionCell.m */,
+				D1BA65901DED917800DFCA34 /* PYSearchViewController.h */,
+				D1BA65911DED917800DFCA34 /* PYSearchViewController.m */,
+				D1BA65921DED917800DFCA34 /* UIColor+PYExtension.h */,
+				D1BA65931DED917800DFCA34 /* UIColor+PYExtension.m */,
+				D1BA65941DED917800DFCA34 /* UIView+PYExtension.h */,
+				D1BA65951DED917800DFCA34 /* UIView+PYExtension.m */,
+			);
+			path = PYSearch;
+			sourceTree = "<group>";
+		};
+		D1BA659C1DED91CB00DFCA34 /* FocusCity */ = {
+			isa = PBXGroup;
+			children = (
+				D1BA659D1DED91CB00DFCA34 /* Controller */,
+				D1BA65A21DED91CB00DFCA34 /* Model */,
+				D1BA65A51DED91CB00DFCA34 /* View */,
+			);
+			name = FocusCity;
+			path = Index/FocusCity;
+			sourceTree = "<group>";
+		};
+		D1BA659D1DED91CB00DFCA34 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1BA659E1DED91CB00DFCA34 /* FocusCityViewController.h */,
+				D1BA659F1DED91CB00DFCA34 /* FocusCityViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D1BA65A21DED91CB00DFCA34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1BA65A31DED91CB00DFCA34 /* CityMode.h */,
+				D1BA65A41DED91CB00DFCA34 /* CityMode.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1BA65A51DED91CB00DFCA34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1BA65A61DED91CB00DFCA34 /* FocusCityViewCell.h */,
+				D1BA65A71DED91CB00DFCA34 /* FocusCityViewCell.m */,
+				D1BA65A81DED91CB00DFCA34 /* FocusCityViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,9 +525,11 @@
 			files = (
 				D17AA6771DE7ED9100E5D746 /* LaunchScreen.storyboard in Resources */,
 				D17AA6C41DEA0B8200E5D746 /* WeatherViewCell.xib in Resources */,
+				D1BA65AD1DED91CB00DFCA34 /* FocusCityViewCell.xib in Resources */,
 				D17AA6741DE7ED9100E5D746 /* Assets.xcassets in Resources */,
 				D17AA6AC1DE80A6C00E5D746 /* WeatherController.xib in Resources */,
 				D17AA6721DE7ED9100E5D746 /* Main.storyboard in Resources */,
+				D1BA65961DED917800DFCA34 /* PYSearch.bundle in Resources */,
 				D11BE3531DEA85CE0043D960 /* IndexCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,19 +604,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				D11BE34E1DEA19190043D960 /* main.m in Sources */,
+				D1BA65991DED917800DFCA34 /* PYSearchViewController.m in Sources */,
 				D11BE34D1DEA190C0043D960 /* ANConst.m in Sources */,
 				D11BE34C1DEA19050043D960 /* ANHTTPSessionManager.m in Sources */,
 				D15A83F61DED436D001DA712 /* ANProgressHUD.m in Sources */,
+				D1BA65981DED917800DFCA34 /* PYSearchSuggestionViewController.m in Sources */,
+				D1BA65B61DED96C800DFCA34 /* AreaMode.m in Sources */,
 				D11BE34B1DEA18C60043D960 /* WeatherController.m in Sources */,
 				D11BE34A1DEA18B80043D960 /* WeatherViewCell.m in Sources */,
 				D11BE3491DEA18B30043D960 /* IndexMode.m in Sources */,
+				D1BA65BF1DEE99A500DFCA34 /* PYSearchSuggestionCell.m in Sources */,
 				D11BE3561DEBE16C0043D960 /* NSString+Extension.m in Sources */,
+				D1BA659A1DED917800DFCA34 /* UIColor+PYExtension.m in Sources */,
+				D1BA65AC1DED91CB00DFCA34 /* FocusCityViewCell.m in Sources */,
+				D1BA65BC1DEDCCAC00DFCA34 /* SearchCityViewController.m in Sources */,
 				D11BE3481DEA18AD0043D960 /* ForecastDayMode.m in Sources */,
 				D11BE3521DEA85CE0043D960 /* IndexCollectionViewCell.m in Sources */,
 				D11BE3471DEA18A70043D960 /* HistoryDayMode.m in Sources */,
+				D1BA65AB1DED91CB00DFCA34 /* CityMode.m in Sources */,
 				D11BE3461DEA18A00043D960 /* TodayMode.m in Sources */,
+				D1BA65971DED917800DFCA34 /* PYSearchConst.m in Sources */,
+				D1BA65A91DED91CB00DFCA34 /* FocusCityViewController.m in Sources */,
 				D11BE3451DEA18700043D960 /* AppDelegate.m in Sources */,
-				D11BE3441DEA186B0043D960 /* ViewController.m in Sources */,
+				D1BA659B1DED917800DFCA34 /* UIView+PYExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,8 +780,9 @@
 			baseConfigurationReference = 6BB8D78C66E70F258F71FD4E /* Pods-weather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 4NQ697GJ7H;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/weather/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/Annie/Desktop/weather/weather/PrefixHeader.pch;
 				INFOPLIST_FILE = weather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -652,8 +796,9 @@
 			baseConfigurationReference = 226A2E468347FD6748977143 /* Pods-weather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 4NQ697GJ7H;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/weather/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = /Users/Annie/Desktop/weather/weather/PrefixHeader.pch;
 				INFOPLIST_FILE = weather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

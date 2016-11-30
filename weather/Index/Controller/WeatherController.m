@@ -14,7 +14,12 @@
 #import "WeatherViewCell.h"
 #import "IndexCollectionViewCell.h"
 
-@interface WeatherController ()<UITableViewDataSource,UITableViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
+#import "PYSearch.h"
+#import "AreaMode.h"
+
+#import "SearchCityViewController.h"
+
+@interface WeatherController ()<UITableViewDataSource,UITableViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,PYSearchViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;//!< 北京View
 @property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;//!< 当前城市标签
 @property (weak, nonatomic) IBOutlet UILabel *cityTempLabel;//!< 当前温度标签
@@ -27,7 +32,9 @@
 @property (weak, nonatomic)  ANHTTPSessionManager * manager;//!< manager
 
 @property (strong, nonatomic) TodayMode * todayMode;//!< 今日天气模型
-@property (strong, nonatomic) NSMutableArray * weatherstArray;//!< 温度表格的数据
+@property (strong, nonatomic) NSMutableArray * weathersArray;//!< 温度表格的数据
+
+
 
 
 @end
@@ -40,7 +47,7 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configUI];
-    [self configData];
+    [self loadData];
    
     // Do any additional setup after loading the view from its nib.
 }
@@ -74,23 +81,30 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
 }
 
 #pragma mark - data
-- (void)configData
+- (void)loadData
 {
     // 提醒正在加载
-    [ANProgressHUD show];
+    NSString * str = [NSString stringWithFormat:@"正在加载\n%@的天气",self.params[@"cityname"]];
+    [ANProgressHUD showWithStatus:str];
     // 弱引用
     __weak typeof(self) weakSelf = self;
 
-    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+//    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
     
     //    dict[@"citypinyin"] = @"beijing";
     //    dict[@"apikey"] = ANApikey;
-    
+//    errMsg = "Service provider response status error";
+//    errNum = 300209;
+
     // 发送网络请求
-    [self.manager GET:ANRequestURLCityweathers parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        //        ANLog(@"----------------%@",responseObject);
+    [self.manager GET:ANRequestURLCityweathers parameters:self.params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        ANLog(@"----------------%@",responseObject);
         //        ANWriteToPlist(responseObject,@"123")
-        
+        if (![responseObject[@"errMsg"] isEqualToString:@"success"])
+        {
+           [ANProgressHUD  showErrorWithStatus:ANRequestServiesError];
+            return ;
+        }
         // 数据转模型
         weakSelf.todayMode = [TodayMode mj_objectWithKeyValues:responseObject[@"retData"][@"today"]];
         //        ANLog(@"----------------%@",weakSelf.todayMode);
@@ -100,9 +114,9 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
         weakSelf.cityTempLabel.text = [self.todayMode.curTemp tempInTempString];
         
         // 设置温度表格的数据
-        weakSelf.weatherstArray = [ForecastDayMode mj_objectArrayWithKeyValuesArray:responseObject[@"retData"][@"history"]];
+        weakSelf.weathersArray = [ForecastDayMode mj_objectArrayWithKeyValuesArray:responseObject[@"retData"][@"history"]];
         NSArray * forecastArray = [ForecastDayMode mj_objectArrayWithKeyValuesArray:responseObject[@"retData"][@"forecast"]];
-        [self.weatherstArray addObjectsFromArray:forecastArray];
+        [self.weathersArray addObjectsFromArray:forecastArray];
         
         //        ANLog(@"----------------%@",weakSelf.forecastArray);
         // 刷新表格
@@ -128,13 +142,13 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.weatherstArray.count;
+    return self.weathersArray.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     WeatherViewCell * cell = [tableView dequeueReusableCellWithIdentifier:WeatherCellID];
-    cell.weather = self.weatherstArray[indexPath.row];
+    cell.weather = self.weathersArray[indexPath.row];
     //    cell.backgroundColor = ANRandomColor;
     return cell;
 }
@@ -173,12 +187,6 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
 {
     return 150;
 }
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    UIView * view = [[UIView alloc]init];
-//    //    view.backgroundColor  = ANRandomColor;
-//    return view;
-//}
 
 #pragma mark - 数据源 UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -230,12 +238,60 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
     }
     return  _manager;
 }
-- (NSMutableArray *)weatherstArray
+- (NSMutableArray *)weathersArray
 {
-    if (!_weatherstArray) {
-        _weatherstArray = [NSMutableArray array];
+    if (!_weathersArray) {
+        _weathersArray = [NSMutableArray array];
     }
-    return _weatherstArray;
+    return _weathersArray;
+}
+- (void)setParams:(NSMutableDictionary *)params
+{
+    _params = params;
+}
+
+- (IBAction)searchCityButtonClick:(id)sender {
+    SearchCityViewController * searchCityVc = [[SearchCityViewController alloc]init];
+    searchCityVc = [searchCityVc searchCity:^(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText) {
+        self.params = @{@"cityname":searchText};
+        [self dismissViewControllerAnimated:NO completion:nil];
+        [self loadData];
+    }];
+    searchCityVc.delegate = self;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:searchCityVc];
+    [self presentViewController:nav  animated:NO completion:nil];
+}
+
+#pragma mark - PYSearchViewControllerDelegate
+- (void)searchViewController:(PYSearchViewController *)searchViewController searchTextDidChange:(UISearchBar *)seachBar searchText:(NSString *)searchText
+{
+    if (searchText.length) { // 与搜索条件再搜索
+        // 根据条件发送查询（这里模拟搜索）
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{ // 搜素完毕
+            // 显示建议搜索结果
+            //            NSMutableArray *searchSuggestionsM = [NSMutableArray array];
+            NSDictionary * dict = @{@"cityname":searchText};
+            [SVProgressHUD showWithStatus:@"正在搜索中..."];
+            [[ANHTTPSessionManager manager] GET:ANRequestURLCitylist parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                ANLog(@"------------%@",responseObject);
+                //                ANWriteToPlist(responseObject, @"搜索出来数据");
+                NSMutableArray * arr = [NSMutableArray array];
+                arr = [AreaMode mj_objectArrayWithKeyValuesArray:responseObject[@"retData"]];
+                NSMutableArray *dictArr = [NSMutableArray array];
+                for (int i = 0; i < arr.count; i++) {
+                    AreaMode *dict = arr[i];
+                    [dictArr addObject:dict.name_cn];
+                }
+                searchViewController.searchSuggestions = dictArr;
+                [ANProgressHUD showSuccessWithStatus:ANRequestSuccess];
+                
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [ANProgressHUD showErrorWithStatus:ANRequestError];
+            }];
+            
+            
+        });
+    }
 }
 
 #pragma mark - dealloc
@@ -248,5 +304,6 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

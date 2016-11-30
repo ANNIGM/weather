@@ -36,7 +36,7 @@
 }
 - (instancetype) tempInTempString
 {
-    NSString * str = [self substringToIndex:1];
+    NSString * str = [self substringToIndex:(self.length - 1)];
     str = [NSString stringWithFormat:@"%@°",str];
 
     return str;

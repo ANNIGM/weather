@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface WeatherController : UIViewController
-
+@property (strong, nonatomic) NSDictionary * params;
 @end

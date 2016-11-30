@@ -54,16 +54,28 @@
                         <constraint firstItem="RZ4-cz-XQC" firstAttribute="top" secondItem="P1x-AC-49E" secondAttribute="top" id="w0q-hR-TlP"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4R8-oF-JWQ">
+                    <rect key="frame" x="345" y="607" width="30" height="60"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="searchCityButtonClick:" destination="-1" eventType="touchUpInside" id="Kep-xC-Cpm"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="P1x-AC-49E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9tt-2B-tna"/>
                 <constraint firstItem="2hH-nb-Te8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Aez-yd-6Kn"/>
                 <constraint firstItem="2hH-nb-Te8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Bb2-yg-5CR"/>
+                <constraint firstAttribute="trailing" secondItem="4R8-oF-JWQ" secondAttribute="trailing" id="H0Q-Kk-VTw"/>
                 <constraint firstAttribute="bottom" secondItem="2hH-nb-Te8" secondAttribute="bottom" id="ecx-vb-GGH"/>
                 <constraint firstItem="P1x-AC-49E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="j3V-IO-uq3"/>
                 <constraint firstAttribute="trailing" secondItem="P1x-AC-49E" secondAttribute="trailing" id="kmU-fm-NcR"/>
                 <constraint firstAttribute="trailing" secondItem="2hH-nb-Te8" secondAttribute="trailing" id="loX-Nq-QQT"/>
+                <constraint firstAttribute="bottom" secondItem="4R8-oF-JWQ" secondAttribute="bottom" id="qN9-lt-wir"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>

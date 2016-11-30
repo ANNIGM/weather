@@ -41,8 +41,7 @@
     //    dict[@"cityid"] = @"101010100";//101020100
     
     // 添加 每次发请求都要传的参数
-    dict[@"cityname"] = @"上海";
-    dict[@"cityid"] = @"101020100";
+
     
     // 发送请求
     NSURLSessionDataTask *  task = [super GET:URLString parameters:dict progress:downloadProgress success:success failure:failure];

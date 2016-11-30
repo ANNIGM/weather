@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "WeatherController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    _window = [[UIWindow alloc]init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    WeatherController * weatherVc = [[WeatherController alloc]init];
+    weatherVc.params = (NSMutableDictionary *)@{@"cityname":@"北京"};
+    self.window.rootViewController = weatherVc;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

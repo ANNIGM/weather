@@ -15,4 +15,4 @@ UIKIT_EXTERN NSString * const ANRequestURLCitylist;
 /** 提示信息 */
 UIKIT_EXTERN NSString * const ANRequestError;
 UIKIT_EXTERN NSString * const ANRequestSuccess;
-//UIKIT_EXTERN NSString * const ANRequestStatus;
+UIKIT_EXTERN NSString * const ANRequestServiesError;
