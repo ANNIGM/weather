@@ -1,0 +1,70 @@
+//
+//  PrefixHeader.pch
+//  weather
+//
+//  Created by IndusGoo on 2016/11/25.
+//  Copyright © 2016年 Annie. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// #ifdef __OBJC__ 和 #endif中的内容只会出现在OC源文件中
+#ifdef __OBJC__
+
+//#import "UIBarButtonItem+ANExtension.h"
+//#import "UIView+ANExtension.h"
+//#import "UITextField+ANExtension.h"
+//#import "NSObject+ANExtension.h"
+//#import "ANConst.h"
+//#import "UIImage+ANExtension.h"
+//#import "UIImageView+ANExtension.h"
+//#import "NSString+ANExtension.h"
+//#import "NSDate+ANExtension.h"
+//#import "ANStatusBarViewController.h"
+
+// 导入头文件
+#import "ANHTTPSessionManager.h"
+#import <AFNetworking/AFNetworking.h>
+#import "ANConst.h"
+#import "NSString+Extension.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "ANProgressHUD.h"
+#import <MJExtension/MJExtension.h>
+
+// 打印输出
+#ifdef DEBUG // 开发调试阶段
+#define ANLog(...) NSLog(__VA_ARGS__)
+#else // 打包发布阶段
+#define ANLog(...)
+#endif
+
+// 打印方法名
+#define ANLogFuc ANLog(@"----------%s", __func__);
+
+// 将文件写入本地
+#define ANWriteToPlist(obj, filename) [obj writeToFile:[NSString stringWithFormat:@"/Users/Annie/Desktop/%@.plist", filename] atomically:YES];
+
+// 颜色RGB
+#define ANColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+// 颜色RGBA
+#define ANColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+// 随机色
+#define ANRandomColor ANColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+// 灰色
+#define ANGrayColor(v) ANColor(v, v, v)
+// 背景灰
+#define ANCommonBgColor ANGrayColor(206)
+// 透明灰
+#define ANGrayColorA(v,a) ANColorA(v,v,v,a)
+
+// 屏幕宽高
+#define ANScreenW [UIScreen mainScreen].bounds.size.width
+#define ANScreenH [UIScreen mainScreen].bounds.size.height
+
+
+
+#endif
+
+#endif /* PrefixHeader_pch */
+

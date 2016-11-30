@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherController">
+            <connections>
+                <outlet property="backgroundImageView" destination="2hH-nb-Te8" id="p76-cg-tgt"/>
+                <outlet property="cityNameLabel" destination="RZ4-cz-XQC" id="81N-I2-Xfv"/>
+                <outlet property="cityTempLabel" destination="QAU-Hc-QcM" id="FcF-6i-Vew"/>
+                <outlet property="topViewConsTop" destination="j3V-IO-uq3" id="RuP-2u-OJ0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2hH-nb-Te8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1x-AC-49E" userLabel="topView">
+                    <rect key="frame" x="0.0" y="80" width="375" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZ4-cz-XQC" userLabel="城市名">
+                            <rect key="frame" x="188" y="0.0" width="0.0" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Et4-fC-bJ6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAU-Hc-QcM" userLabel="温度">
+                            <rect key="frame" x="187.5" y="40" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="8MR-KU-WrE"/>
+                        <constraint firstItem="RZ4-cz-XQC" firstAttribute="centerX" secondItem="P1x-AC-49E" secondAttribute="centerX" id="Dgj-y6-And"/>
+                        <constraint firstItem="QAU-Hc-QcM" firstAttribute="top" secondItem="RZ4-cz-XQC" secondAttribute="bottom" id="Vu5-Pw-VV5"/>
+                        <constraint firstItem="QAU-Hc-QcM" firstAttribute="centerX" secondItem="P1x-AC-49E" secondAttribute="centerX" id="oXr-eu-ydX"/>
+                        <constraint firstItem="RZ4-cz-XQC" firstAttribute="top" secondItem="P1x-AC-49E" secondAttribute="top" id="w0q-hR-TlP"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="P1x-AC-49E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9tt-2B-tna"/>
+                <constraint firstItem="2hH-nb-Te8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Aez-yd-6Kn"/>
+                <constraint firstItem="2hH-nb-Te8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Bb2-yg-5CR"/>
+                <constraint firstAttribute="bottom" secondItem="2hH-nb-Te8" secondAttribute="bottom" id="ecx-vb-GGH"/>
+                <constraint firstItem="P1x-AC-49E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="j3V-IO-uq3"/>
+                <constraint firstAttribute="trailing" secondItem="P1x-AC-49E" secondAttribute="trailing" id="kmU-fm-NcR"/>
+                <constraint firstAttribute="trailing" secondItem="2hH-nb-Te8" secondAttribute="trailing" id="loX-Nq-QQT"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
