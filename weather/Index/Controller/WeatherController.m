@@ -13,6 +13,7 @@
 #import "IndexMode.h"
 #import "WeatherViewCell.h"
 #import "IndexCollectionViewCell.h"
+#import "IndexDetailViewController.h"
 
 #import "PYSearch.h"
 #import "AreaMode.h"
@@ -203,6 +204,14 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
     cell.indexMode = self.todayMode.index[indexPath.row];
     return cell;
 }
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    IndexCollectionViewCell * cell = (IndexCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    IndexDetailViewController * indexDetailVc  = [[IndexDetailViewController alloc]init];
+    indexDetailVc.indexMode = cell.indexMode;
+    [self presentViewController:indexDetailVc animated:YES completion:nil];
+    
+}
 
 #pragma mark - 监听
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
@@ -250,6 +259,7 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
     _params = params;
 }
 
+#pragma mark - +按钮点击
 - (IBAction)searchCityButtonClick:(id)sender {
     SearchCityViewController * searchCityVc = [[SearchCityViewController alloc]init];
     searchCityVc = [searchCityVc searchCity:^(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText) {

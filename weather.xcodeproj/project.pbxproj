@@ -42,6 +42,8 @@
 		D1BA65B61DED96C800DFCA34 /* AreaMode.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65B51DED96C800DFCA34 /* AreaMode.m */; };
 		D1BA65BC1DEDCCAC00DFCA34 /* SearchCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65BB1DEDCCAC00DFCA34 /* SearchCityViewController.m */; };
 		D1BA65BF1DEE99A500DFCA34 /* PYSearchSuggestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65BE1DEE99A500DFCA34 /* PYSearchSuggestionCell.m */; };
+		D1BA65C31DEEEE0A00DFCA34 /* IndexDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65C11DEEEE0A00DFCA34 /* IndexDetailViewController.m */; };
+		D1BA65C41DEEEE0A00DFCA34 /* IndexDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1BA65C21DEEEE0A00DFCA34 /* IndexDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,10 +129,13 @@
 		D1BA65A81DED91CB00DFCA34 /* FocusCityViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FocusCityViewCell.xib; sourceTree = "<group>"; };
 		D1BA65B41DED96C800DFCA34 /* AreaMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaMode.h; sourceTree = "<group>"; };
 		D1BA65B51DED96C800DFCA34 /* AreaMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaMode.m; sourceTree = "<group>"; };
-		D1BA65BA1DEDCCAC00DFCA34 /* SearchCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCityViewController.h; sourceTree = "<group>"; };
-		D1BA65BB1DEDCCAC00DFCA34 /* SearchCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCityViewController.m; sourceTree = "<group>"; };
+		D1BA65BA1DEDCCAC00DFCA34 /* SearchCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchCityViewController.h; path = ../../Index/Controller/SearchCityViewController.h; sourceTree = "<group>"; };
+		D1BA65BB1DEDCCAC00DFCA34 /* SearchCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchCityViewController.m; path = ../../Index/Controller/SearchCityViewController.m; sourceTree = "<group>"; };
 		D1BA65BD1DEE99A500DFCA34 /* PYSearchSuggestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSearchSuggestionCell.h; sourceTree = "<group>"; };
 		D1BA65BE1DEE99A500DFCA34 /* PYSearchSuggestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSearchSuggestionCell.m; sourceTree = "<group>"; };
+		D1BA65C01DEEEE0A00DFCA34 /* IndexDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexDetailViewController.h; sourceTree = "<group>"; };
+		D1BA65C11DEEEE0A00DFCA34 /* IndexDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexDetailViewController.m; sourceTree = "<group>"; };
+		D1BA65C21DEEEE0A00DFCA34 /* IndexDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,8 +266,9 @@
 				D17AA6A61DE80A6C00E5D746 /* WeatherController.h */,
 				D17AA6A71DE80A6C00E5D746 /* WeatherController.m */,
 				D17AA6A81DE80A6C00E5D746 /* WeatherController.xib */,
-				D1BA65BA1DEDCCAC00DFCA34 /* SearchCityViewController.h */,
-				D1BA65BB1DEDCCAC00DFCA34 /* SearchCityViewController.m */,
+				D1BA65C01DEEEE0A00DFCA34 /* IndexDetailViewController.h */,
+				D1BA65C11DEEEE0A00DFCA34 /* IndexDetailViewController.m */,
+				D1BA65C21DEEEE0A00DFCA34 /* IndexDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -331,6 +337,8 @@
 		D1BA65861DED915700DFCA34 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D1BA65BA1DEDCCAC00DFCA34 /* SearchCityViewController.h */,
+				D1BA65BB1DEDCCAC00DFCA34 /* SearchCityViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -523,6 +531,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1BA65C41DEEEE0A00DFCA34 /* IndexDetailViewController.xib in Resources */,
 				D17AA6771DE7ED9100E5D746 /* LaunchScreen.storyboard in Resources */,
 				D17AA6C41DEA0B8200E5D746 /* WeatherViewCell.xib in Resources */,
 				D1BA65AD1DED91CB00DFCA34 /* FocusCityViewCell.xib in Resources */,
@@ -615,6 +624,7 @@
 				D11BE3491DEA18B30043D960 /* IndexMode.m in Sources */,
 				D1BA65BF1DEE99A500DFCA34 /* PYSearchSuggestionCell.m in Sources */,
 				D11BE3561DEBE16C0043D960 /* NSString+Extension.m in Sources */,
+				D1BA65C31DEEEE0A00DFCA34 /* IndexDetailViewController.m in Sources */,
 				D1BA659A1DED917800DFCA34 /* UIColor+PYExtension.m in Sources */,
 				D1BA65AC1DED91CB00DFCA34 /* FocusCityViewCell.m in Sources */,
 				D1BA65BC1DEDCCAC00DFCA34 /* SearchCityViewController.m in Sources */,
