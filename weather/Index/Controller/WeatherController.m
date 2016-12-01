@@ -81,6 +81,8 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
     
     // 注册cell
     [self.tempTableView registerNib:[UINib nibWithNibName:NSStringFromClass([WeatherViewCell class]) bundle:nil] forCellReuseIdentifier:WeatherCellID];
+    
+    
 
 }
 
@@ -102,6 +104,7 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
 
     // 发送网络请求
     [self.manager GET:ANRequestURLCityweathers parameters:self.params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    
 //        ANLog(@"----------------%@",responseObject);
         //        ANWriteToPlist(responseObject,@"123")
         if (![responseObject[@"errMsg"] isEqualToString:@"success"])
@@ -109,6 +112,9 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
            [ANProgressHUD  showErrorWithStatus:ANRequestServiesError];
             return ;
         }
+//        if ([self.params[@"cityname"] isEqualToString:responseObject[@"retData"][@"city"]]) {
+//            return;
+//        }
         // 数据转模型
         weakSelf.todayMode = [TodayMode mj_objectWithKeyValues:responseObject[@"retData"][@"today"]];
         //        ANLog(@"----------------%@",weakSelf.todayMode);

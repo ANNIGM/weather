@@ -57,7 +57,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4R8-oF-JWQ">
                     <rect key="frame" x="345" y="607" width="30" height="60"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                    <state key="normal" title="+">
+                    <state key="normal">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
