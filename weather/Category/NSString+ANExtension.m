@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Annie. All rights reserved.
 //
 
-#import "NSString+Extension.h"
+#import "NSString+ANExtension.h"
 
-@implementation NSString (Extension)
+@implementation NSString (ANExtension)
 - (instancetype)dayInDateString
 {
     if (![self containsString:@"日"]) {

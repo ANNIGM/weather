@@ -27,7 +27,8 @@
 #import "ANHTTPSessionManager.h"
 #import <AFNetworking/AFNetworking.h>
 #import "ANConst.h"
-#import "NSString+Extension.h"
+#import "NSString+ANExtension.h"
+#import "UIView+ANExtension.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "ANProgressHUD.h"
 #import <MJExtension/MJExtension.h>

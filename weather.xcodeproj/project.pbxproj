@@ -20,7 +20,7 @@
 		D11BE34E1DEA19190043D960 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D17AA6681DE7ED9100E5D746 /* main.m */; };
 		D11BE3521DEA85CE0043D960 /* IndexCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D11BE3501DEA85CE0043D960 /* IndexCollectionViewCell.m */; };
 		D11BE3531DEA85CE0043D960 /* IndexCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D11BE3511DEA85CE0043D960 /* IndexCollectionViewCell.xib */; };
-		D11BE3561DEBE16C0043D960 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D11BE3551DEBE16C0043D960 /* NSString+Extension.m */; };
+		D11BE3561DEBE16C0043D960 /* NSString+ANExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D11BE3551DEBE16C0043D960 /* NSString+ANExtension.m */; };
 		D15A83F61DED436D001DA712 /* ANProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D15A83F51DED436D001DA712 /* ANProgressHUD.m */; };
 		D17AA6721DE7ED9100E5D746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D17AA6701DE7ED9100E5D746 /* Main.storyboard */; };
 		D17AA6741DE7ED9100E5D746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D17AA6731DE7ED9100E5D746 /* Assets.xcassets */; };
@@ -44,6 +44,8 @@
 		D1BA65BF1DEE99A500DFCA34 /* PYSearchSuggestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65BE1DEE99A500DFCA34 /* PYSearchSuggestionCell.m */; };
 		D1BA65C31DEEEE0A00DFCA34 /* IndexDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65C11DEEEE0A00DFCA34 /* IndexDetailViewController.m */; };
 		D1BA65C41DEEEE0A00DFCA34 /* IndexDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1BA65C21DEEEE0A00DFCA34 /* IndexDetailViewController.xib */; };
+		D1BA65CA1DEFCD0B00DFCA34 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65C91DEFCD0B00DFCA34 /* BaseViewController.m */; };
+		D1BA65CD1DEFDB8600DFCA34 /* UIView+ANExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BA65CC1DEFDB8600DFCA34 /* UIView+ANExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +72,8 @@
 		D11BE34F1DEA85CE0043D960 /* IndexCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexCollectionViewCell.h; sourceTree = "<group>"; };
 		D11BE3501DEA85CE0043D960 /* IndexCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexCollectionViewCell.m; sourceTree = "<group>"; };
 		D11BE3511DEA85CE0043D960 /* IndexCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionViewCell.xib; sourceTree = "<group>"; };
-		D11BE3541DEBE16C0043D960 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
-		D11BE3551DEBE16C0043D960 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		D11BE3541DEBE16C0043D960 /* NSString+ANExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ANExtension.h"; sourceTree = "<group>"; };
+		D11BE3551DEBE16C0043D960 /* NSString+ANExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ANExtension.m"; sourceTree = "<group>"; };
 		D15A83F41DED436D001DA712 /* ANProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANProgressHUD.h; sourceTree = "<group>"; };
 		D15A83F51DED436D001DA712 /* ANProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANProgressHUD.m; sourceTree = "<group>"; };
 		D17AA6641DE7ED9100E5D746 /* weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,10 @@
 		D1BA65C01DEEEE0A00DFCA34 /* IndexDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexDetailViewController.h; sourceTree = "<group>"; };
 		D1BA65C11DEEEE0A00DFCA34 /* IndexDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexDetailViewController.m; sourceTree = "<group>"; };
 		D1BA65C21DEEEE0A00DFCA34 /* IndexDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexDetailViewController.xib; sourceTree = "<group>"; };
+		D1BA65C81DEFCD0B00DFCA34 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D1BA65C91DEFCD0B00DFCA34 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D1BA65CB1DEFDB8600DFCA34 /* UIView+ANExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ANExtension.h"; sourceTree = "<group>"; };
+		D1BA65CC1DEFDB8600DFCA34 /* UIView+ANExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ANExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,8 @@
 			children = (
 				D17AA66A1DE7ED9100E5D746 /* AppDelegate.h */,
 				D17AA66B1DE7ED9100E5D746 /* AppDelegate.m */,
+				D1BA65C81DEFCD0B00DFCA34 /* BaseViewController.h */,
+				D1BA65C91DEFCD0B00DFCA34 /* BaseViewController.m */,
 				D1BA659C1DED91CB00DFCA34 /* FocusCity */,
 				D17AA6A41DE80A6C00E5D746 /* Index */,
 				D1BA65851DED915700DFCA34 /* Search */,
@@ -304,8 +312,10 @@
 		D17AA6AE1DE84D4A00E5D746 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				D11BE3541DEBE16C0043D960 /* NSString+Extension.h */,
-				D11BE3551DEBE16C0043D960 /* NSString+Extension.m */,
+				D11BE3541DEBE16C0043D960 /* NSString+ANExtension.h */,
+				D11BE3551DEBE16C0043D960 /* NSString+ANExtension.m */,
+				D1BA65CB1DEFDB8600DFCA34 /* UIView+ANExtension.h */,
+				D1BA65CC1DEFDB8600DFCA34 /* UIView+ANExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -621,12 +631,14 @@
 				D1BA65B61DED96C800DFCA34 /* AreaMode.m in Sources */,
 				D11BE34B1DEA18C60043D960 /* WeatherController.m in Sources */,
 				D11BE34A1DEA18B80043D960 /* WeatherViewCell.m in Sources */,
+				D1BA65CA1DEFCD0B00DFCA34 /* BaseViewController.m in Sources */,
 				D11BE3491DEA18B30043D960 /* IndexMode.m in Sources */,
 				D1BA65BF1DEE99A500DFCA34 /* PYSearchSuggestionCell.m in Sources */,
-				D11BE3561DEBE16C0043D960 /* NSString+Extension.m in Sources */,
+				D11BE3561DEBE16C0043D960 /* NSString+ANExtension.m in Sources */,
 				D1BA65C31DEEEE0A00DFCA34 /* IndexDetailViewController.m in Sources */,
 				D1BA659A1DED917800DFCA34 /* UIColor+PYExtension.m in Sources */,
 				D1BA65AC1DED91CB00DFCA34 /* FocusCityViewCell.m in Sources */,
+				D1BA65CD1DEFDB8600DFCA34 /* UIView+ANExtension.m in Sources */,
 				D1BA65BC1DEDCCAC00DFCA34 /* SearchCityViewController.m in Sources */,
 				D11BE3481DEA18AD0043D960 /* ForecastDayMode.m in Sources */,
 				D11BE3521DEA85CE0043D960 /* IndexCollectionViewCell.m in Sources */,

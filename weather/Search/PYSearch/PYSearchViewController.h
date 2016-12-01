@@ -83,6 +83,10 @@ typedef NS_ENUM(NSInteger, PYSearchResultShowMode) { // 搜索结果显示方式
 /** 搜索历史缓存保存路径, 默认为PYSearchHistoriesPath(PYSearchConst.h文件中的宏定义) */
 @property (nonatomic, copy) NSString *searchHistoriesCachePath;
 
+
+/** 搜索历史 */
+@property (nonatomic, strong) NSMutableArray *searchHistories;
+
 /** 代理 */
 @property (nonatomic, weak) id<PYSearchViewControllerDelegate> delegate;
 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Extension)
+@interface NSString (ANExtension)
 -(instancetype) dayInDateString;//!< 取出日期中的天
 -(instancetype) dayInWeekString;//!< 取出星期中的天
 -(instancetype) tempInTempString;//!< 取出温度中的数字

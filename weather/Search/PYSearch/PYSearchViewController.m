@@ -18,9 +18,6 @@
 /** 头部内容view */
 @property (nonatomic, weak) UIView *headerContentView;
 
-/** 搜索历史 */
-@property (nonatomic, strong) NSMutableArray *searchHistories;
-
 /** 键盘正在移动 */
 @property (nonatomic, assign) BOOL keyboardshowing;
 /** 记录键盘高度 */

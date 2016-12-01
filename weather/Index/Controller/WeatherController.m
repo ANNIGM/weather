@@ -56,11 +56,12 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
 #pragma mark - UI
 - (void)configUI
 {
+    self.view.backgroundColor = [UIColor clearColor];
     // 设置背景
-    [self.backgroundImageView  sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"bg"] ];
+//    [self.backgroundImageView  sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"bg"] ];
     // 设置尺寸
-    self.view.frame = [UIScreen mainScreen].bounds;
-        CGRect rect = CGRectMake(0, 0, ANScreenW, ANScreenH);
+//    self.view.frame = [UIScreen mainScreen].bounds;
+    CGRect rect = CGRectMake(0, 0, ANScreenW, ANScreenH);
     
     // 添加tempTableView
     UITableView * tableView = [[UITableView alloc]initWithFrame:rect style:UITableViewStyleGrouped];
@@ -75,6 +76,8 @@ static NSString * const IndexCollectionViewCellID = @"IndexCollectionViewCellID"
     
     // 添加监听器 监听向上滑动
     [self.tempTableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
+    
+    //
     
     // 注册cell
     [self.tempTableView registerNib:[UINib nibWithNibName:NSStringFromClass([WeatherViewCell class]) bundle:nil] forCellReuseIdentifier:WeatherCellID];
